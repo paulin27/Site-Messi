@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Curiosidades Messi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    
+  <link rel="stylesheet" href="plugins/jquery.bxslider.css">
+  <link rel="stylesheet" href="plugins/magnific-popup.css">
+  <script src="plugins/jquery.min.js"></script>
+  <script src="plugins/jquery.bxslider.min.js"></script>
+  <script src="plugins/jquery.magnific-popup.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+      mode: 'horizontal',
+      captions: true,
+    //slideidth: 600,
+      auto: true,
+      pager: true,
+    //speed: 100,
+    //controls: ture
+      })
+
+      $('#galeria-fotos').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+
+    });
+  </script>
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <div class="container">
+            <img src="imagem/messi_logo1.png" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="interna/historia.html">Historia</a></li>
+                    <li><a href="interna/fotos.html">Fotos</a></li>
+                    <li><a href="interna/jogadas.html">Jogadas</a></li>
+                    <li><a href="https://www.instagram.com/leomessi/" target="_blank">Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="banners">
+        <div class="container">
+            <h2>Curiosidades sobre um dos melhores jogadores do mundo.</h2> 
+            
+            <ul class="slider">
+                <li><img src="imagem/banners/messi_novo.jpg"></li>
+                <li><img src="imagem/banners/messi_meio.jpg"></li>
+                <li><img src="imagem/banners/messi-psg.jpg"></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer id="rodape">
+       <p>Site desenvolvido pelo aluno do 1º Periodo de sistema de informação Paulo David.</p>
+       <a href="https://www.instagram.com/paulinz7_/?next=%2F" target="_blank">@paulinz7_</a>
+    </footer>
+</body>
+
+</html>
+

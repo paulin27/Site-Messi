@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Curiosidades Messi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../plugins/jquery.bxslider.css">
+  <link rel="stylesheet" href="../plugins/magnific-popup.css">
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../plugins/jquery.bxslider.min.js"></script>
+  <script src="../plugins/jquery.magnific-popup.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+      mode: 'horizontal',
+      captions: true,
+    //slideidth: 600,
+      auto: true,
+      pager: true,
+    //speed: 100,
+    //controls: ture
+      })
+
+      $('#galeria-fotos').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+
+    });
+  </script>
+   
+    <body>
+
+        <header id="cabecalho">
+            <div class="container">
+                <img src="../imagem/messi_logo1.png" id="logo">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../interna/historia.html">Historia</a></li>
+                        <li><a href="../interna/fotos.html">Fotos</a></li>
+                        <li><a href="../interna/jogadas.html">Jogadas</a></li>
+                        <li><a href="https://www.instagram.com/leomessi/" target="_blank">Instagram</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section id="fotos">
+            <div class="container">
+                <h2 class="titulo-secao">Alguns momentos importantes.</h2>
+                <div id="galeria-fotos">
+                    <a href="../imagem/fotos/27_messi.jpg" title="Foto 01"><img src="../imagem/fotos/27_messi.jpg" alt=""></a>
+                    <a href="../imagem/fotos/chuteira_de_ouro.jpg" title="Foto 02"><img src="../imagem/fotos/chuteira_de_ouro.jpg" alt=""></a>
+                    <a href="../imagem/fotos/lionel_messi_da.jpg" title="Foto 03"><img src="../imagem/fotos/lionel_messi_da.jpg" alt=""></a>
+                    <a href="../imagem/fotos/lionel_messi_trofeu_barcelona.jpg" title="Foto 04"><img src="../imagem/fotos/lionel_messi_trofeu_barcelona.jpg" alt=""></a>
+                    <a href="../imagem/fotos/messi_campeão.jpg" title="Foto 05"><img src="../imagem/fotos/messi_campeão.jpg" alt=""></a>
+                    <a href="../imagem/fotos/messi_champions.jpg" title="Foto 06"><img src="../imagem/fotos/messi_champions.jpg" alt=""></a>
+                    <a href="../imagem/fotos/messi_jogando_pelo_barcelona.jpg" title="Foto 07"><img src="../imagem/fotos/messi_jogando_pelo_barcelona.jpg" alt=""></a>
+                    <a href="../imagem/fotos/saat_lionel_messi.jpg" title="Foto 08"><img src="../imagem/fotos/saat_lionel_messi.jpg" alt=""></a>
+                </div>
+            </div>
+        </section>
+        <footer id="rodape">
+            <p>Site desenvolvido pelo aluno do 1º Periodo de sistema de informação Paulo David.</p>
+            <a href="https://www.instagram.com/paulinz7_/?next=%2Fdo" target="_blank">@paulinz7_</a>
+        </footer>
+    </body>
+    </html>
